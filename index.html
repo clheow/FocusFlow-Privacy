@@ -63,20 +63,59 @@
     opacity: 0.35;
   }
 
-.pixel-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 15px;
+.header {
+  text-align: center;
+  padding: 45px 28px 35px;
+}
+
+/* Logo bulat */
+.logo-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #6c5ce7;
+  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.2);
 }
 
-.pixel-icon img {
-  width: 75px;
-  height: 75px;
-  object-fit: contain;
+.logo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   image-rendering: pixelated;
+}
+
+/* Judul di tengah */
+.header h1 {
+  margin: 0 auto 18px;
+  text-align: center;
+  color: #3f3a5b;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+/* Deskripsi di tengah */
+.header p {
+  margin: 0 auto 25px;
+  max-width: 750px;
+  text-align: center;
+  color: #4d4965;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Update di tengah */
+.updated {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #4d4965;
+  font-size: 14px;
 }
 
   .hero h1 {
@@ -263,20 +302,21 @@
 
 <div class="container">
 
-  <!-- Header -->
-<div class="pixel-icon">
-  <img src="icon-only.png" alt="FocusFlow Logo">
+<header class="header">
+  <div class="logo-wrapper">
+    <img src="icon-only.png" alt="FocusFlow Logo">
   </div>
-    <h1>Kebijakan Privasi FocusFlow</h1>
 
-    <p>
-      Privasi dan keamanan data pengguna adalah bagian penting dari FocusFlow.
-    </p>
+  <h1>Kebijakan Privasi FocusFlow</h1>
 
-    <span class="updated">
-      ✦ Terakhir diperbarui: 1 Oktober 2026
-    </span>
-  </header>
+  <p>
+    Privasi dan keamanan data pengguna adalah bagian penting dari FocusFlow.
+  </p>
+
+  <div class="updated">
+    ✦ Terakhir diperbarui: 1 Oktober 2026
+  </div>
+</header>
 
 
   <!-- Content -->

@@ -3,578 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Kebijakan Privasi - FocusFlow</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  * {
-    box-sizing: border-box;
+  :root {
+    --ff-bg: #F5F3FF;
+    --ff-surface: #FFFFFF;
+    --ff-primary: #6C5CE7;
+    --ff-ink: #2D2A4A;
+    --ff-ink-soft: #6B6890;
+    --ff-accent-warm: #FFB020;
   }
-
+  * { box-sizing: border-box; }
   body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--ff-bg);
+    color: var(--ff-ink);
     margin: 0;
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    background:
-      linear-gradient(135deg, #f5f1ff 0%, #eee9ff 50%, #f9f6ff 100%);
-    color: #37334d;
+    padding: 40px 16px 80px;
     line-height: 1.7;
   }
-
-  /* Background pixel decoration */
-  body::before {
-    content: "";
-    position: fixed;
-    width: 180px;
-    height: 180px;
-    top: 30px;
-    left: -70px;
-    background: #dcd3ff;
-    opacity: 0.35;
-    box-shadow:
-      220px 500px 0 #e8ddff,
-      900px 150px 0 #ddd4ff,
-      700px 700px 0 #e9e1ff;
-    z-index: -1;
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .header { text-align: center; margin-bottom: 32px; }
+  .header img {
+    width: 88px;
+    height: 88px;
+    image-rendering: pixelated;
+    border: 3px solid var(--ff-ink);
+    border-radius: 20px;
+    box-shadow: 4px 4px 0 var(--ff-ink);
+    background: var(--ff-primary);
+    margin-bottom: 16px;
   }
-
-  .container {
-    width: min(900px, 92%);
-    margin: 40px auto;
+  .header h1 {
+    font-family: 'Silkscreen', monospace;
+    color: var(--ff-primary);
+    font-size: 1.4rem;
+    margin: 0 0 4px;
   }
-
-  .hero::after {
-    content: "✦  ✦  ✦";
-    position: absolute;
-    top: 18px;
-    right: 25px;
-    font-size: 18px;
-    opacity: 0.35;
+  .header p.subtitle {
+    font-family: 'Silkscreen', monospace;
+    font-size: 0.7rem;
+    color: var(--ff-ink-soft);
+    letter-spacing: 1px;
   }
-
-.header {
-  text-align: center;
-  padding: 45px 28px 35px;
-}
-
-/* Logo bulat */
-.logo-wrapper {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 22px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #6c5ce7;
-  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.2);
-}
-
-.logo-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  image-rendering: pixelated;
-}
-
- /* Header */
-.header {
-  background: transparent;
-  padding: 45px 28px 35px;
-  text-align: center;
-}
-
-/* Logo */
-.logo-wrapper {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #7567e8;
-  border-radius: 28px;
-  overflow: hidden;
-
-  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.2);
-}
-
-.logo-wrapper img {
-  width: 82px;
-  height: 82px;
-  object-fit: contain;
-  image-rendering: pixelated;
-}
-
-/* Judul */
-.header h1 {
-  margin: 0 auto 15px;
-  text-align: center;
-  color: #3f3a5b;
-  font-size: 38px;
-  line-height: 1.2;
-  letter-spacing: 0.5px;
-}
-
-/* Deskripsi */
-.header p {
-  max-width: 750px;
-  margin: 0 auto 22px;
-  text-align: center;
-  color: #4d4965;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Tanggal update */
-.header .updated {
-  display: inline-block;
-  margin: 0;
-  padding: 8px 16px;
-
-  background: #ffffff;
-  border: 1px solid #e5e0f5;
-  border-radius: 20px;
-
-  color: #4d4965;
-  font-size: 14px;
-}
-
-  .intro {
-    background: #f5f2ff;
-    border-left: 5px solid #7567e8;
-    padding: 18px 20px;
-    border-radius: 12px;
-    margin-bottom: 30px;
+  .updated {
+    text-align: center;
+    color: var(--ff-ink-soft);
+    font-size: 0.85rem;
+    margin-bottom: 32px;
   }
-
-  section {
-    margin-bottom: 30px;
-    padding-bottom: 25px;
-    border-bottom: 1px dashed #ddd8ef;
-  }
-
-  section:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-  }
-
-  h2 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0 0 12px;
-    color: #50459c;
-    font-size: 20px;
-  }
-
-  .number {
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #e9e4ff;
-    color: #6759c9;
-    border-radius: 9px;
-    font-size: 13px;
-    font-weight: bold;
-    box-shadow: 3px 3px 0 #d5cef8;
-  }
-
-  p {
-    margin: 8px 0 12px;
-  }
-
-  ul {
-    padding-left: 20px;
-    margin-top: 10px;
-  }
-
-  li {
-    margin: 9px 0;
-    padding-left: 5px;
-  }
-
-  li::marker {
-    color: #7567e8;
-  }
-
-  strong {
-    color: #4d447f;
-  }
-
-  a {
-    color: #6759d0;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* Highlight box */
-  .highlight {
-    background: #fff8df;
-    border: 1px solid #f3dfa0;
-    padding: 16px 18px;
+  .card {
+    background: var(--ff-surface);
+    border: 2px solid var(--ff-ink);
     border-radius: 14px;
-    margin-top: 15px;
+    box-shadow: 4px 4px 0 var(--ff-ink);
+    padding: 20px 24px;
+    margin-bottom: 20px;
   }
-
-  .highlight strong {
-    color: #866c19;
+  .card h2 {
+    font-family: 'Silkscreen', monospace;
+    font-size: 0.95rem;
+    margin-top: 0;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #E0DCF5;
   }
-
-  /* Contact */
-  .contact {
-    background: linear-gradient(135deg, #f1edff, #faf8ff);
-    padding: 22px;
-    border-radius: 16px;
+  .card p, .card li { font-size: 0.95rem; }
+  .card ul { padding-left: 20px; margin: 8px 0; }
+  .card a { color: var(--ff-primary); font-weight: 600; }
+  .badge {
+    display: inline-block;
+    background: var(--ff-accent-warm);
+    color: var(--ff-ink);
+    font-family: 'Silkscreen', monospace;
+    font-size: 0.6rem;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1.5px solid var(--ff-ink);
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+  .contact-box {
+    background: var(--ff-primary);
+    color: #fff;
     text-align: center;
+    border: 2px solid var(--ff-ink);
+    box-shadow: 4px 4px 0 var(--ff-ink);
+    border-radius: 14px;
+    padding: 20px;
   }
-
-  .contact-icon {
-    font-size: 28px;
-    margin-bottom: 5px;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    margin: 25px 0 40px;
-    color: #85809a;
-    font-size: 13px;
-  }
-
-  .pixel-line {
-    letter-spacing: 6px;
-    color: #a69bef;
-    margin-bottom: 8px;
-  }
-
-  /* Mobile */
-  @media (max-width: 600px) {
-    .container {
-      width: 94%;
-      margin: 20px auto;
-    }
-
-    .hero {
-      padding: 30px 20px;
-      border-radius: 20px;
-    }
-
-    .hero h1 {
-      font-size: 25px;
-    }
-
-    .content {
-      padding: 23px 19px;
-      border-radius: 20px;
-    }
-
-    h2 {
-      font-size: 18px;
-    }
-
-    .number {
-      width: 29px;
-      height: 29px;
-      min-width: 29px;
-    }
-
-   /* Mobile */
-@media (max-width: 600px) {
-  .container {
-    width: 94%;
-    margin: 20px auto;
-  }
-
-  .hero {
-    padding: 30px 20px;
-    border-radius: 20px;
-  }
-
-  .hero h1 {
-    font-size: 25px;
-  }
-
-  .content {
-    padding: 23px 19px;
-    border-radius: 20px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  .number {
-    width: 29px;
-    height: 29px;
-    min-width: 29px;
-  }
-}
+  .contact-box a { color: #fff; text-decoration: underline; }
+  footer { text-align: center; color: var(--ff-ink-soft); font-size: 0.75rem; margin-top: 32px; }
 </style>
 </head>
-
 <body>
+<div class="wrap">
 
-<div class="container">
+  <div class="header">
+    <img src="icon-only.png" alt="FocusFlow logo">
+    <h1>FocusFlow</h1>
+    <p class="subtitle">KEBIJAKAN PRIVASI</p>
+  </div>
+  <p class="updated">Terakhir diperbarui: [2 Oktober 2026]</p>
 
-<header class="header">
-  <div class="logo-wrapper">
-    <img src="icon-only.png" alt="FocusFlow Logo">
+  <div class="card">
+    <p style="margin-top:0">FocusFlow ("kami", "aplikasi ini") adalah aplikasi produktivitas mobile yang membantu pengguna mengatur tugas, menggunakan teknik Pomodoro, melacak progres gamifikasi, dan menyusun rencana belajar dengan bantuan AI. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pengguna.</p>
   </div>
 
-  <h1>Kebijakan Privasi FocusFlow</h1>
-
-  <p>
-    Privasi dan keamanan data pengguna adalah bagian penting dari FocusFlow.
-  </p>
-
-  <div class="updated">
-    ✦ Terakhir diperbarui: 1 Oktober 2026
+  <div class="card">
+    <h2>1. Informasi yang Kami Kumpulkan</h2>
+    <span class="badge">AKUN</span><span class="badge">TUGAS</span><span class="badge">GAMIFIKASI</span>
+    <p>Saat Anda mendaftar dan menggunakan FocusFlow, kami mengumpulkan:</p>
+    <ul>
+      <li><strong>Nama</strong> yang Anda masukkan saat pendaftaran</li>
+      <li><strong>Alamat email</strong>, digunakan sebagai identitas akun Anda</li>
+      <li><strong>Kata sandi</strong>, disimpan dalam bentuk terenkripsi (hashed), tidak dalam bentuk teks biasa</li>
+      <li><strong>Data tugas (task)</strong>: judul, deskripsi, prioritas, dan tenggat waktu</li>
+      <li><strong>Riwayat sesi Pomodoro</strong> yang Anda selesaikan</li>
+      <li><strong>Data progres gamifikasi</strong>: XP, level, karakter dan aksesoris yang Anda kumpulkan dan kenakan</li>
+    </ul>
+    <p>Data di atas disimpan terkait dengan akun Anda, sehingga progres Anda tetap tersedia saat Anda masuk kembali menggunakan akun yang sama, termasuk setelah memasang ulang aplikasi atau berganti perangkat.</p>
   </div>
-</header>
 
+  <div class="card">
+    <h2>2. Bagaimana Kami Menggunakan Informasi Anda</h2>
+    <ul>
+      <li>Membuat dan mengelola akun Anda</li>
+      <li>Menyimpan dan menyinkronkan data tugas serta progres Anda antar perangkat</li>
+      <li>Menyediakan fitur AI Planner untuk menyusun jadwal belajar</li>
+      <li>Menampilkan statistik produktivitas pribadi Anda dalam aplikasi</li>
+    </ul>
+  </div>
 
-  <!-- Content -->
-  <main class="content">
+  <div class="card">
+    <h2>3. Fitur AI Planner dan Pihak Ketiga</h2>
+    <p>Fitur AI Planner mengirimkan judul tugas, prioritas, dan tenggat waktu yang Anda pilih ke layanan <strong>Google Gemini API</strong> untuk menghasilkan saran jadwal belajar. Data yang dikirim terbatas pada informasi tugas yang relevan dan tidak menyertakan kata sandi atau data pribadi lain. Lihat <a href="https://policies.google.com/privacy" target="_blank">Kebijakan Privasi Google</a> untuk memahami pemrosesan data melalui API tersebut.</p>
+  </div>
 
-    <div class="intro">
-      FocusFlow ("kami", "aplikasi ini") adalah aplikasi produktivitas mobile
-      untuk membantu pengguna mengatur tugas, menggunakan teknik Pomodoro,
-      dan menyusun rencana belajar dengan bantuan AI.
-      Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan,
-      menggunakan, dan melindungi informasi pengguna.
-    </div>
+  <div class="card">
+    <h2>4. Penyimpanan Data</h2>
+    <ul>
+      <li><strong>Secara lokal di perangkat Anda</strong> (SQLite), agar aplikasi tetap dapat digunakan tanpa koneksi internet</li>
+      <li><strong>Di server kami</strong> (MySQL, dihosting di Railway), untuk sinkronisasi dan cadangan data Anda</li>
+    </ul>
+  </div>
 
+  <div class="card">
+    <h2>5. Keamanan Data</h2>
+    <p>Kami menggunakan enkripsi (hashing) untuk kata sandi dan token JWT untuk mengamankan sesi login Anda. Tidak ada metode transmisi atau penyimpanan data elektronik yang 100% aman, dan kami tidak dapat menjamin keamanan mutlak.</p>
+  </div>
 
-    <section>
-      <h2>
-        <span class="number">01</span>
-        Informasi yang Kami Kumpulkan
-      </h2>
+  <div class="card">
+    <h2>6. Berbagi Data</h2>
+    <p>Kami <strong>tidak menjual</strong> data pribadi Anda kepada pihak ketiga. Data hanya dibagikan ke Google Gemini API sebagaimana dijelaskan pada bagian 3, semata-mata untuk fitur AI Planner.</p>
+  </div>
 
-      <p>
-        Saat Anda mendaftar dan menggunakan FocusFlow, kami mengumpulkan:
-      </p>
+  <div class="card">
+    <h2>7. Hak Anda &amp; Penghapusan Akun</h2>
+    <p>Anda dapat menghapus akun beserta seluruh data terkait (tugas, riwayat Pomodoro, progres gamifikasi) kapan saja melalui:</p>
+    <ul>
+      <li>Menu <strong>Profile → Hapus Akun</strong> di dalam aplikasi, atau</li>
+      <li>Mengirim permintaan ke email kontak di bawah</li>
+    </ul>
+    <p>Penghapusan bersifat permanen dan tidak dapat dibatalkan.</p>
+  </div>
 
-      <ul>
-        <li><strong>Nama</strong> yang Anda masukkan saat pendaftaran</li>
+  <div class="card">
+    <h2>8. Privasi Anak</h2>
+    <p>FocusFlow tidak ditujukan untuk anak-anak di bawah usia 13 tahun, dan kami tidak secara sengaja mengumpulkan data dari anak di bawah usia tersebut.</p>
+  </div>
 
-        <li>
-          <strong>Alamat email</strong> yang digunakan sebagai identitas akun Anda
-        </li>
+  <div class="card">
+    <h2>9. Perubahan Kebijakan Privasi</h2>
+    <p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan akan tercermin pada tanggal "Terakhir diperbarui" di bagian atas halaman ini.</p>
+  </div>
 
-        <li>
-          <strong>Kata sandi</strong>, yang disimpan dalam bentuk terenkripsi
-          (hashed), tidak dalam bentuk teks biasa
-        </li>
+  <div class="contact-box">
+    <p style="margin:0 0 6px; font-family:'Silkscreen',monospace; font-size:0.8rem;">ADA PERTANYAAN?</p>
+    <p style="margin:0">Hubungi kami: <a href="mailto:[ISI EMAIL KAMU]">[naylahbasyirah2655@gmail.com]</a></p>
+  </div>
 
-        <li>
-          <strong>Data tugas (task)</strong> yang Anda buat, termasuk judul,
-          deskripsi, prioritas, dan tenggat waktu
-        </li>
-
-        <li>
-          <strong>Riwayat sesi Pomodoro</strong>
-          (waktu fokus yang Anda selesaikan)
-        </li>
-
-        <li>
-          <strong>Data progres gamifikasi</strong>, seperti XP, level,
-          dan karakter/aksesoris yang Anda pilih
-        </li>
-      </ul>
-    </section>
-
-
-    <section>
-      <h2>
-        <span class="number">02</span>
-        Bagaimana Kami Menggunakan Informasi Anda
-      </h2>
-
-      <p>Informasi yang dikumpulkan digunakan untuk:</p>
-
-      <ul>
-        <li>Membuat dan mengelola akun Anda</li>
-
-        <li>
-          Menyimpan dan menyinkronkan data tugas serta progres Anda
-          antar perangkat
-        </li>
-
-        <li>
-          Menyediakan fitur AI Planner, yaitu menyusun jadwal belajar
-          berdasarkan tugas yang Anda pilih
-        </li>
-
-        <li>
-          Menampilkan statistik produktivitas pribadi Anda dalam aplikasi
-        </li>
-      </ul>
-    </section>
-
-
-    <section>
-      <h2>
-        <span class="number">03</span>
-        Fitur AI Planner dan Pihak Ketiga
-      </h2>
-
-      <p>
-        Fitur AI Planner mengirimkan judul tugas, prioritas, dan tenggat waktu
-        yang Anda pilih ke layanan <strong>Google Gemini API</strong>
-        untuk menghasilkan saran jadwal belajar.
-      </p>
-
-      <div class="highlight">
-        <strong>🔒 Catatan Privasi</strong><br>
-        Data yang dikirim terbatas pada informasi tugas yang relevan
-        dan tidak menyertakan kata sandi atau data pribadi lain.
-      </div>
-
-      <p>
-        Silakan merujuk pada
-        <a href="https://policies.google.com/privacy" target="_blank">
-          Kebijakan Privasi Google
-        </a>
-        untuk memahami bagaimana Google memproses data yang diterima
-        melalui API tersebut.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>
-        <span class="number">04</span>
-        Penyimpanan Data
-      </h2>
-
-      <p>Data Anda disimpan di dua tempat:</p>
-
-      <ul>
-        <li>
-          <strong>Secara lokal di perangkat Anda</strong>, menggunakan basis
-          data SQLite, agar aplikasi tetap dapat digunakan tanpa koneksi internet
-        </li>
-
-        <li>
-          <strong>Di server kami</strong> (basis data MySQL yang dihosting
-          di Railway), untuk keperluan sinkronisasi dan cadangan data Anda
-        </li>
-      </ul>
-    </section>
-
-
-    <section>
-      <h2>
-        <span class="number">05</span>
-        Keamanan Data
-      </h2>
-
-      <p>
-        Kami menggunakan enkripsi (hashing) untuk menyimpan kata sandi
-        dan token otentikasi (JWT) untuk mengamankan sesi login Anda.
-      </p>
-
-      <p>
-        Meskipun demikian, tidak ada metode transmisi atau penyimpanan
-        data elektronik yang 100% aman, dan kami tidak dapat menjamin
-        keamanan mutlak.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>
-        <span class="number">06</span>
-        Berbagi Data
-      </h2>
-
-      <p>
-        Kami <strong>tidak menjual</strong> data pribadi Anda kepada pihak ketiga.
-        Data hanya dibagikan ke Google Gemini API sebagaimana dijelaskan
-        pada bagian 3, semata-mata untuk menyediakan fitur AI Planner.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>
-        <span class="number">07</span>
-        Hak Anda
-      </h2>
-
-      <p>
-        Anda dapat meminta penghapusan akun dan data terkait dengan
-        menghubungi kami melalui informasi kontak di bawah.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>
-        <span class="number">08</span>
-        Privasi Anak
-      </h2>
-
-      <p>
-        FocusFlow tidak ditujukan untuk anak-anak di bawah usia 13 tahun,
-        dan kami tidak secara sengaja mengumpulkan data dari anak
-        di bawah usia tersebut.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>
-        <span class="number">09</span>
-        Perubahan Kebijakan Privasi
-      </h2>
-
-      <p>
-        Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu.
-        Perubahan akan tercermin pada tanggal "Terakhir diperbarui"
-        di bagian atas halaman ini.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>
-        <span class="number">10</span>
-        Kontak
-      </h2>
-
-      <div class="contact">
-        <div class="contact-icon">💌</div>
-
-        <p>
-          Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi ini,
-          silakan hubungi kami melalui email:
-        </p>
-
-        <strong>naylahbasyirah2655@gmail.com</strong>
-      </div>
-    </section>
-
-  </main>
-
-
-  <footer>
-    <div class="pixel-line">✦ ✦ ✦</div>
-    FocusFlow · Stay Focused, One Task at a Time
-  </footer>
+  <footer>FocusFlow &copy; 2026</footer>
 
 </div>
-
 </body>
 </html>

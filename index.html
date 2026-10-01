@@ -63,19 +63,21 @@
     opacity: 0.35;
   }
 
-  .pixel-icon {
-    width: 72px;
-    height: 72px;
-    margin: 0 auto 15px;
-    background: #fff;
-    color: #7567e8;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 38px;
-    box-shadow: 5px 5px 0 rgba(55, 51, 77, 0.15);
-  }
+.pixel-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pixel-icon img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
 
   .hero h1 {
     margin: 0;
@@ -262,9 +264,9 @@
 <div class="container">
 
   <!-- Header -->
-  <header class="hero">
-    <div class="pixel-icon">🐱</div>
-
+<div class="pixel-icon">
+  <img src="icon-only.png" alt="FocusFlow Logo">
+  </div>
     <h1>Kebijakan Privasi FocusFlow</h1>
 
     <p>

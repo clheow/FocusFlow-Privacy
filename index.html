@@ -86,6 +86,14 @@
     margin-right: 6px;
     margin-bottom: 4px;
   }
+  .note {
+    background: #FFF7E8;
+    border: 1.5px dashed var(--ff-accent-warm);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
   .contact-box {
     background: var(--ff-primary);
     color: #fff;
@@ -107,7 +115,7 @@
     <h1>FocusFlow</h1>
     <p class="subtitle">KEBIJAKAN PRIVASI</p>
   </div>
-  <p class="updated">Terakhir diperbarui: 2 Oktober 2026</p>
+  <p class="updated">Terakhir diperbarui: 3 Oktober 2026</p>
 
   <div class="card">
     <p style="margin-top:0">FocusFlow ("kami", "aplikasi ini") adalah aplikasi produktivitas mobile yang membantu pengguna mengatur tugas, menggunakan teknik Pomodoro, melacak progres gamifikasi, dan menyusun rencana belajar dengan bantuan AI. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pengguna.</p>
@@ -120,19 +128,20 @@
     <ul>
       <li><strong>Nama</strong> yang Anda masukkan saat pendaftaran</li>
       <li><strong>Alamat email</strong>, digunakan sebagai identitas akun Anda</li>
-      <li><strong>Kata sandi</strong>, disimpan dalam bentuk terenkripsi (hashed), tidak dalam bentuk teks biasa</li>
+      <li><strong>Kata sandi</strong> yang Anda buat khusus untuk akun FocusFlow (bukan kata sandi email Anda), disimpan dalam bentuk terenkripsi (hashed), tidak dalam bentuk teks biasa</li>
       <li><strong>Data tugas (task)</strong>: judul, deskripsi, prioritas, tenggat waktu, dan kategori</li>
       <li><strong>Riwayat sesi Pomodoro</strong> yang Anda selesaikan</li>
       <li><strong>Data progres gamifikasi</strong>: XP, level, karakter dan aksesoris yang Anda kumpulkan dan kenakan</li>
     </ul>
-    <p>Data di atas disimpan terkait dengan akun Anda, sehingga progres Anda tetap tersedia saat Anda masuk kembali menggunakan akun yang sama, termasuk setelah memasang ulang aplikasi atau berganti perangkat.</p>
+    <p>Data di atas disinkronkan ke akun Anda saat Anda masuk dalam kondisi terhubung internet, sehingga progres Anda dapat dipulihkan saat Anda masuk kembali menggunakan akun yang sama di perangkat yang sama maupun perangkat baru, termasuk setelah memasang ulang aplikasi.</p>
+    <div class="note">Saat Anda keluar (logout) dari akun di sebuah perangkat, seluruh data tersebut dihapus dari perangkat itu demi menjaga privasi antar pengguna yang berbagi perangkat, namun tetap tersimpan di server kami dan akan dipulihkan saat Anda masuk kembali.</div>
   </div>
 
   <div class="card">
     <h2>2. Bagaimana Kami Menggunakan Informasi Anda</h2>
     <ul>
       <li>Membuat dan mengelola akun Anda</li>
-      <li>Menyimpan dan menyinkronkan data tugas serta progres Anda antar perangkat</li>
+      <li>Menyimpan dan menyinkronkan data tugas, riwayat fokus, serta progres gamifikasi Anda antar perangkat</li>
       <li>Menyediakan fitur AI Planner untuk menyusun jadwal belajar</li>
       <li>Menampilkan statistik produktivitas pribadi Anda dalam aplikasi</li>
     </ul>
@@ -146,8 +155,8 @@
   <div class="card">
     <h2>4. Penyimpanan Data</h2>
     <ul>
-      <li><strong>Secara lokal di perangkat Anda</strong> (SQLite), agar aplikasi tetap dapat digunakan tanpa koneksi internet</li>
-      <li><strong>Di server kami</strong> (MySQL, dihosting di Railway), untuk sinkronisasi dan cadangan data Anda</li>
+      <li><strong>Secara lokal di perangkat Anda</strong> (SQLite), agar aplikasi tetap dapat digunakan tanpa koneksi internet, dan dihapus otomatis saat Anda keluar dari akun</li>
+      <li><strong>Di server kami</strong> (MySQL, dihosting di Railway), sebagai penyimpanan utama akun Anda dan sumber pemulihan data</li>
     </ul>
   </div>
 
@@ -163,7 +172,7 @@
 
   <div class="card">
     <h2>7. Hak Anda &amp; Penghapusan Akun</h2>
-    <p>Anda dapat menghapus akun beserta seluruh data terkait (tugas, riwayat Pomodoro, progres gamifikasi) kapan saja melalui:</p>
+    <p>Anda dapat menghapus akun beserta seluruh data terkait (tugas, riwayat Pomodoro, progres gamifikasi) secara permanen dari server kami kapan saja melalui:</p>
     <ul>
       <li>Menu <strong>Profile → Hapus Akun</strong> di dalam aplikasi, atau</li>
       <li>Mengirim permintaan ke email kontak di bawah</li>
@@ -183,12 +192,7 @@
 
   <div class="contact-box">
     <p style="margin:0 0 6px; font-family:'Silkscreen',monospace; font-size:0.8rem;">ADA PERTANYAAN?</p>
-   <p>
-  Hubungi kami:
-  <a href="mailto:naylahbasyirah2655@gmail.com">
-    naylahbasyirah2655@gmail.com
-  </a>
-</p>
+    <p style="margin:0">Hubungi kami: <a href="mailto:naylahbasyirah2655@gmail.com</a></p>
   </div>
 
   <footer>FocusFlow &copy; 2026</footer>
